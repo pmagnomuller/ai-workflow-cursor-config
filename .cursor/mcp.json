@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "Notion": {
+      "url": "https://mcp.notion.com/mcp",
+      "headers": {}
+    },
+    "atlassian": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://mcp.atlassian.com/v1/sse"
+      ]
+    }
+  }
+}
