@@ -1,0 +1,248 @@
+.todo-app {
+  width: 100%;
+}
+
+.todo-container {
+  background: #000000;
+  border-radius: 0;
+  box-shadow: 
+    0 0 20px #ff00ff,
+    0 0 40px #00ffff,
+    0 0 60px #ffff00,
+    inset 0 0 20px rgba(255, 0, 255, 0.1);
+  padding: 40px;
+  margin-top: 40px;
+  border: 4px solid #ff00ff;
+  position: relative;
+  animation: pulse-border 3s ease-in-out infinite;
+}
+
+@keyframes pulse-border {
+  0%, 100% {
+    border-color: #ff00ff;
+    box-shadow: 
+      0 0 20px #ff00ff,
+      0 0 40px #00ffff,
+      0 0 60px #ffff00;
+  }
+  50% {
+    border-color: #00ffff;
+    box-shadow: 
+      0 0 30px #00ffff,
+      0 0 50px #ff00ff,
+      0 0 70px #ffff00;
+  }
+}
+
+.todo-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.todo-header h1 {
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  font-size: 32px;
+  font-weight: 400;
+  color: #ffff00;
+  margin-bottom: 16px;
+  text-shadow: 
+    0 0 10px #ffff00,
+    0 0 20px #ffff00,
+    0 0 30px #ffff00,
+    4px 4px 0 #ff00ff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: text-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes text-glow {
+  from {
+    text-shadow: 
+      0 0 10px #ffff00,
+      0 0 20px #ffff00,
+      0 0 30px #ffff00,
+      4px 4px 0 #ff00ff;
+  }
+  to {
+    text-shadow: 
+      0 0 20px #ffff00,
+      0 0 30px #ffff00,
+      0 0 40px #ffff00,
+      4px 4px 0 #00ffff;
+  }
+}
+
+.subtitle {
+  color: #00ffff;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.todo-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-family: 'Orbitron', 'Courier New', monospace;
+  font-weight: 700;
+  border: 3px solid #00ffff;
+  border-radius: 0;
+  outline: none;
+  transition: all 0.2s;
+  background: #000000;
+  color: #00ffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 
+    0 0 10px #00ffff,
+    inset 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+.todo-input::placeholder {
+  color: #00ffff;
+  opacity: 0.5;
+}
+
+.todo-input:focus {
+  border-color: #ffff00;
+  box-shadow: 
+    0 0 20px #ffff00,
+    0 0 30px #ffff00,
+    inset 0 0 10px rgba(255, 255, 0, 0.2);
+  color: #ffff00;
+}
+
+.add-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-family: 'Orbitron', 'Courier New', monospace;
+  font-weight: 900;
+  color: #000000;
+  background: linear-gradient(135deg, #ff00ff 0%, #00ffff 100%);
+  border: 3px solid #ffff00;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 
+    0 0 15px #ff00ff,
+    0 4px 0 #ffff00;
+  position: relative;
+}
+
+.add-button:hover {
+  background: linear-gradient(135deg, #ffff00 0%, #ff00ff 100%);
+  box-shadow: 
+    0 0 25px #ffff00,
+    0 6px 0 #00ffff;
+  transform: translateY(-2px);
+}
+
+.add-button:active {
+  transform: translateY(2px);
+  box-shadow: 
+    0 0 15px #ff00ff,
+    0 2px 0 #ffff00;
+}
+
+.todo-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #ff00ff;
+  padding-bottom: 16px;
+  box-shadow: 0 3px 0 #00ffff;
+}
+
+.filter-button {
+  padding: 8px 16px;
+  font-size: 12px;
+  font-family: 'Orbitron', 'Courier New', monospace;
+  font-weight: 700;
+  color: #00ffff;
+  background: transparent;
+  border: 2px solid #00ffff;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.filter-button:hover {
+  background: #00ffff;
+  color: #000000;
+  box-shadow: 0 0 15px #00ffff;
+  transform: translateY(-2px);
+}
+
+.filter-button.active {
+  background: linear-gradient(135deg, #ff00ff 0%, #ffff00 100%);
+  color: #000000;
+  border-color: #ffff00;
+  box-shadow: 
+    0 0 20px #ff00ff,
+    0 0 30px #ffff00;
+  font-weight: 900;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+  min-height: 100px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #00ffff;
+  font-family: 'Orbitron', 'Courier New', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #00ffff;
+  font-size: 14px;
+}
+
+.clear-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  font-family: 'Orbitron', 'Courier New', monospace;
+  font-weight: 700;
+  color: #ff00ff;
+  background: transparent;
+  border: 3px solid #ff00ff;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 0 10px #ff00ff;
+}
+
+.clear-button:hover {
+  background: #ff00ff;
+  color: #000000;
+  box-shadow: 
+    0 0 25px #ff00ff,
+    0 0 35px #ff00ff;
+  transform: translateY(-2px);
+}
+
+.clear-button:active {
+  transform: translateY(0);
+}
+

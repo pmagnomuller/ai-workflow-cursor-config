@@ -1,0 +1,98 @@
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #000000;
+  border: 2px solid #00ffff;
+  border-radius: 0;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.todo-item:hover {
+  background: rgba(0, 255, 255, 0.1);
+  border-color: #ffff00;
+  box-shadow: 
+    0 0 15px #00ffff,
+    inset 0 0 15px rgba(0, 255, 255, 0.1);
+  transform: translateX(4px);
+}
+
+.todo-item.completed {
+  opacity: 0.7;
+  border-color: #ff00ff;
+  background: rgba(255, 0, 255, 0.05);
+}
+
+.todo-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+}
+
+.todo-checkbox {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  accent-color: #00ffff;
+  filter: drop-shadow(0 0 5px #00ffff);
+}
+
+.todo-text {
+  font-size: 16px;
+  font-family: 'Orbitron', 'Courier New', monospace;
+  font-weight: 700;
+  color: #00ffff;
+  flex: 1;
+  word-break: break-word;
+  line-height: 1.6;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff;
+}
+
+.delete-button {
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  line-height: 1;
+  color: #ff00ff;
+  background: transparent;
+  border: 2px solid #ff00ff;
+  border-radius: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+  opacity: 0.7;
+  font-weight: 900;
+  text-shadow: 0 0 5px #ff00ff;
+}
+
+.todo-item:hover .delete-button {
+  opacity: 1;
+}
+
+.delete-button:hover {
+  background: #ff00ff;
+  color: #000000;
+  box-shadow: 
+    0 0 15px #ff00ff,
+    0 0 25px #ff00ff;
+  transform: scale(1.1);
+}
+
+.delete-button:active {
+  transform: scale(0.95);
+}
+
