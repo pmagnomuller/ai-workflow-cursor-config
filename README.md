@@ -2,6 +2,9 @@
 
 This repository provides a template for setting up an AI-assisted development workflow using **Cursor IDE** and **Model Context Protocols (MCPs)**. It automates repetitive tasks like managing tickets, updating documentation, and creating pull requests, allowing you to stay focused on problem-solving.
 
+
+**Writeup:** [Cursor as Your Tool](https://pedro-muller.com/cursor-as-your-tool/) on my blog (Sword AI Summit talk).
+
 ## 🎯 What This Workflow Does
 
 Instead of constantly switching between Jira, Notion, and GitHub, you can work entirely within Cursor IDE using natural language commands:
